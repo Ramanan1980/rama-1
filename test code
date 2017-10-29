@@ -1,0 +1,36 @@
+*
+ * StockQuoteService.java
+ *
+ * Created on Sat 13th Oct 2001, 15:25
+ */
+
+package com.systinet.demos.stock;
+
+/**
+ * Simple stock quote service
+ * @author  zdenek
+ * @version 1.0
+ */
+public class StockQuoteService {
+
+
+    public double getQuote(String symbol) {
+        if(symbol!=null && symbol.equalsIgnoreCase("SUNW"))
+            return 10;
+        if(symbol!=null && symbol.equalsIgnoreCase("MSFT"))
+            return 50;
+        if(symbol!=null && symbol.equalsIgnoreCase("BEAS"))
+            return 11;
+        return 0;
+    }
+
+    public java.util.LinkedList getAvailableStocks() {
+        java.util.LinkedList list = new java.util.LinkedList();
+        list.add("SUNW");
+        list.add("MSFT");
+        list.add("BEAS");
+        return list;
+    }
+
+}
+
